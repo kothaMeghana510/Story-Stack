@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Story-Stack/static/css/main.0063c849.css",
+    "main.js": "/Story-Stack/static/js/main.4e33506e.js",
+    "index.html": "/Story-Stack/index.html",
+    "main.0063c849.css.map": "/Story-Stack/static/css/main.0063c849.css.map",
+    "main.4e33506e.js.map": "/Story-Stack/static/js/main.4e33506e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0063c849.css",
+    "static/js/main.4e33506e.js"
+  ]
+}
