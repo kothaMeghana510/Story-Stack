@@ -15,7 +15,8 @@ export default function App(){
   //const [readBook, setReadBook] = useState([]);
   const [readBook, setReadBook] = useState(function() {
     const storedValue = localStorage.getItem('ReadBook');
-    return JSON.parse(storedValue);
+     return storedValue ? JSON.parse(storedValue) : [];
+    // return JSON.parse(storedValue);
   });
   const [showFavorite, setShowFavorite] = useState(false);
   const [addToFavorites, setAddToFavorites] = useState(function(){
@@ -299,7 +300,7 @@ function SelectedBook({selectedID, handleCloseButton, handleAddReadBook, readBoo
   const [moreBooks, setMoreBooks] = useState([]);
   const[showMoreBooks, setShowMoreBooks] = useState(false);
 
-  const isRead = readBook.map((book) => book.id).includes(selectedID);
+  const isRead = (readBook ?? []).map((book) => book.id).includes(selectedID);
   const showUserRating = readBook.find((book) => book.id === selectedID)?.userRating;
   
   const {title, authors, imageLinks, categories, language, publishedDate, description} = book.volumeInfo || {};
