@@ -208,7 +208,7 @@ function ReadBooks({readBook, handleDeleteReadBook, handleToggleLibrary}) {
       <span onClick={handleToggleLibrary}><i className="fa-solid fa-square-xmark popup"></i></span>
     </div>
     <ul>
-      {readBook.map((book) => (
+      {(readBook || []).map((book) => (
         <CompletedBook 
           book = {book}
           key = {book.id} 
