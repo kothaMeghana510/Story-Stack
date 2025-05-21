@@ -1,13 +1,616 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Dosis:wght@200..800&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Henny+Penny&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Delius+Unicase:wght@400;700&family=Dosis:wght@200..800&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Henny+Penny&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&family=Delius+Unicase:wght@400;700&family=Dosis:wght@200..800&family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Henny+Penny&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Qwitcher+Grypen:wght@400;700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Winky+Sans:ital,wght@0,300..900;1,300..900&family=Young+Serif&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    height: auto;
+    width: 100vw;
+    font-size: 1em;
+    font-family: Poppins;
+    color: #fff;
+    background: linear-gradient(135deg, #141E30, #243B55);
+    background-size: cover;
+
+    overflow-x: hidden;
+    overflow-y: auto;
+
+}
+
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.2em;
+    background: linear-gradient(to right, #6a1b9a, #e91e63);
+}
+
+h1{
+    font-family: Delius Unicase;
+    color: whitesmoke;
+    font-size: 2em;
+}
+
+h2{
+    font-family: Ancizar Sans;
+    font-size: 1.3em;
+    /* color: #E0C097; */
+    color: #F39C12;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+
+
+.bookItem{
+    border: 2px solid #6a1b9a;
+    border-radius: 1em;
+    padding: 1.5em;
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
+
+    background-color: #1C2B3A;
+    /* overflow-y: auto; */
+
+    cursor: pointer;
+}
+
+.author{
+    font-size: 0.9em;
+    margin-top: 0.9em;
+    margin-bottom: 0.9em;
+    color: #CCCCCC;
+}
+
+/* .buttonsContainer{
+    display: flex;
+    padding-top: 2em;
+    gap: 2em;
+    justify-content: center;
+} */
+
+button{
+    font-size: 1.2em;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border: none;
+    /* background: linear-gradient(to right, #6a1b9a, #e91e63); */
+    background-color: #e91e63;
+    color: whitesmoke;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-top: 0.8em;
+}
+
+input{
+    color: #fff;
+    height: 2.5em;
+    border-radius: 0.5em;
+    padding: 1em;
+    background-color: rgba(36, 59, 85, 0.9); /* #243B55 with opacity */
+    border: 1px solid #4F6D8C;
+    box-shadow: 0 0 4px #4F6D8C33; /* faint glowing shadow */
+}
+
+
+.booksContainer{  
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    padding: 2em;
+    margin: 2em;
+    position: relative;
+}
+
+.selectedBook{
+    position: fixed;
+    top: 20%;
+    right: -50%;
+    width: 45%;
+    height: 100vh;
+    /* display: none; */
+    /* overflow: hidden; */
+    overflow-y: auto;
+    cursor:auto;
+    margin: 1em;
+
+    background-color: #1C2B3A;
+    border: 2px solid #6a1b9a;
+    border-radius: 1em;
+    box-shadow: 0 0 10px rgba(106, 27, 154, 0.5);
+
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.selectedBook::-webkit-scrollbar{
+    width: 8px;
+}
+
+.selectedBook::-webkit-scrollbar-thumb{
+    background-color: #6a1b9a;
+    border-radius: 4px;
+}
+
+.description {
+    height: 100vh; 
+    padding: 1em;
+    line-height: 1.6;
+    font-size: 1.1em;
+    margin-bottom: 1em;
+}
+
+.show{
+    /* display: block; */
+   right: 0;
+}
+
+.booksContainer.shrink{
+    width: 50%;
+    overflow-y: auto;
+}
+
+.icon{
+    color: #e91e63;
+    font-size: 1.5em;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+}
+
+.imageContainer{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+}
+
+.loader{
+    border: 5px solid #6a1b9a;
+    border-top: 6px solid #e91e63;
+    border-radius: 50%;
+    height: 3em;
+    width: 3em;
+    animation: spin 2s linear infinite;
+    box-shadow: 0 0 8px #6a1b9a; 
+}
+
+.load{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.errorMessage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+}
+
+header{
+    background: linear-gradient(to bottom right, #0F2027, #203A43, #2C5364);
+    padding: 1em;
+    border-radius: 0.9em;
+    display: flex;
+    gap: 2em;
+}
+
+img{
+    object-fit: contain;
+}
+
+.selected-Image{
+    margin-top: 1.2em;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.selected-header{
+    margin-top: 1.2em;
+    font-size: 1em;
+    line-height: 2em;
+}
+
+.categories{
+    background-color: #444;
+    border-radius: 12px;
+    padding: 2px 10px;
+    margin: 2px;
+    display: inline-block;
+    color: #fff;
+    font-size: 13px;
+}
+
+.Ratings{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+    margin-left: 3em;
+    margin-right: 3em;
+    margin-top: 1em;
+    border-radius: 0.9em;
+    background: linear-gradient(to bottom right, #0F2027, #203A43, #2C5364);
+
+}
+
+.read-books{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 2em;
+    border-radius: 1em;
+    width: 85vw;
+    max-width: 600px;
+    height: 80vh;
+    max-height: 600px;
+    overflow-y: scroll;
+    /* height: 50vh; */
+    z-index: 1000;
+    margin-top: 4em;
+
+    background-color: #1e1f22; 
+    color: #f5c85c; 
+
+}
+
+.read-books::-webkit-scrollbar{
+    width: 8px;
+}
+
+.read-books::-webkit-scrollbar-thumb{
+    background-color: #6a1b9a;
+    border-radius: 4px;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+.list-element{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    border-bottom: 1px solid #f5c85c;;
+    padding: 0.6em;
+    cursor: pointer;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.readBook-Image{
+    height: 9em;
+    width: 9em;
+    object-fit: fit;
+    margin-left: 0.5em;
+    font-size: 0.5em;
+}
+
+.read-author{
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+.library{
+    text-align: center;
+    margin-bottom: 1em;
+    font-size: 1.6em;
+}
+
+.deleteReadBook{
+    color:  #f5c85c; 
+}
+
+.popup{
+    position: absolute;
+    top: 6%;
+    left: 90%;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.favourites{
+    font-size: 1.3em;
+    color: grey;
+}
+
+.iconColor{
+    font-size: 1.3em;
+    color: #e91e63;
+}
+
+.more-books{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+
+/* ---------- Responsive Design Enhancements ---------- */
+
+/* @media (max-width: 1024px) {
+    .booksContainer.shrink {
+        width: 100%;
+    }
+
+    .selectedBook {
+        width: 100%;
+        right: -100%;
+    }
+
+    .selectedBook.show {
+        right: 0;
+    }
+
+    .Ratings {
+        margin: 1em;
+        padding: 1em;
+    }
+
+    .read-books {
+        width: 90vw;
+        height: 75vh;
+        padding: 1em;
+    }
+
+    .popup {
+        left: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.1em;
+    }
+
+    .search {
+        flex-direction: row;
+        gap: 0.8em;
+    }
+
+    .booksContainer {
+        padding: 1em;
+        margin: 1em;
+        gap: 1em;
+    }
+
+    .selectedBook {
+        width: 100vw;
+        top: 10%;
+        height: 90vh;
+        margin: 0;
+        border-radius: 0.5em;
+    }
+
+    .read-books {
+        width: 95vw;
+        height: 70vh;
+    }
+
+    .list-element {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .readBook-Image {
+        height: 6em;
+        width: 6em;
+        margin: 0;
+    }
+
+    .popup {
+        left: 80%;
+        font-size: 1.3em;
+    }
+} */
+
+@media (max-width: 768px) {
+    body{
+       height: auto;
+       overflow-y: auto;
+
+    }
+
+    .logo {
+        padding: 0.8em;
+    }
+
+    .search {
+        flex-direction: row;
+        gap: 0.5em;
+    }
+
+    .author{
+        font-size: 0.8em;
+    }
+    input {
+        width: 50%;
+    }
+
+    button {
+        font-size: 1em;
+        padding: 0.4em 0.8em;
+    }
+
+    .Ratings{
+    gap: 0.9em;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 1em;
+    }
+
+    header{
+        gap: 1em;
+    }
+
+    .description {
+        height: 100vh; 
+        padding: 0.5em;
+        line-height: 1.4;
+        font-size: 1em;
+        margin-bottom: 1em;
+    }
+
+    .read-books {
+        font-size: 0.9em;
+    }
+
+    .popup {
+        left: 75%;
+    }
+
+    .selected-Image{
+    height: 6em;
+    width: 6em;
+    object-fit: contain;
+    margin-top: 2em;
+    }
+
+    .booksContainer.shrink{
+        position: fixed;
+    }
+    .selected-header{
+        margin-top: 0.9em;
+        font-size: 0.6em;
+        line-height: 1.5em;
+    }
+
+    .categories{
+        padding: 1px 5px;
+        margin: 2px;
+        font-size: 8px;
+    }
+
+    .list-element{
+        padding: 0.2em;
+        flex-direction: row;
+    }
+
+
+.readBook-Image{
+    height: 9em;
+    width: 9em;
+    object-fit: fit;
+    margin-left: 0.5em;
+    font-size: 0.5em;
+}
+
+
+.read-author{
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+}
+
+.readBook-details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: start;
+}
+
+.read-author{
+    margin-bottom: 2em;
+}
+
+
+.library{
+    margin-bottom: 1em;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.popup{
+    position: fixed;
+    top: 4%;
+    left: 90%;
+}
+
+.more-books{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+h2{
+    font-size: 1em;
+}
+
+.bookItem{
+    padding: 1em;
+}
+
+.imageContainer{
+    gap: 1em;
+}
+
+
+.booksContainer{  
+    padding: 1em;
+    margin: 2em;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.bookImages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.favourites, .iconColor{
+    position: absolute;
+    right: 10%;
+}
+
+.title{
+    font-size: 0.9em;
+}
+
+button{
+    font-size: 1em;
+}
+
 }
