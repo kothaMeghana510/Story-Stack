@@ -301,8 +301,11 @@ function SelectedBook({selectedID, handleCloseButton, handleAddReadBook, readBoo
   const[showMoreBooks, setShowMoreBooks] = useState(false);
 
   const isRead = (readBook ?? []).map((book) => book.id).includes(selectedID);
-  const showUserRating = readBook.find((book) => book.id === selectedID)?.userRating;
-  
+  //const showUserRating = readBook.find((book) => book.id === selectedID)?.userRating;
+  const showUserRating = Array.isArray(readBook)
+  ? readBook.find((book) => String(book.id) === String(selectedID))?.userRating
+  : undefined;
+
   const {title, authors, imageLinks, categories, language, publishedDate, description} = book.volumeInfo || {};
 
 
