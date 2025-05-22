@@ -14,7 +14,7 @@ body{
     font-size: 1em;
     font-family: Poppins;
     color: #fff;
-    background: linear-gradient(135deg, #141E30, #243B55);
+    background: linear-gradient(90deg, #141E30, #243B55);
     background-size: cover;
 
     overflow-x: hidden;
@@ -40,7 +40,6 @@ h1{
 h2{
     font-family: Ancizar Sans;
     font-size: 1.3em;
-    /* color: #E0C097; */
     color: #F39C12;
     font-weight: bold;
     text-transform: capitalize;
@@ -67,19 +66,12 @@ h2{
     color: #CCCCCC;
 }
 
-/* .buttonsContainer{
-    display: flex;
-    padding-top: 2em;
-    gap: 2em;
-    justify-content: center;
-} */
 
 button{
     font-size: 1.2em;
     padding: 0.5em;
     border-radius: 0.5em;
     border: none;
-    /* background: linear-gradient(to right, #6a1b9a, #e91e63); */
     background-color: #e91e63;
     color: whitesmoke;
     cursor: pointer;
@@ -357,89 +349,6 @@ img{
 }
 
 
-/* ---------- Responsive Design Enhancements ---------- */
-
-/* @media (max-width: 1024px) {
-    .booksContainer.shrink {
-        width: 100%;
-    }
-
-    .selectedBook {
-        width: 100%;
-        right: -100%;
-    }
-
-    .selectedBook.show {
-        right: 0;
-    }
-
-    .Ratings {
-        margin: 1em;
-        padding: 1em;
-    }
-
-    .read-books {
-        width: 90vw;
-        height: 75vh;
-        padding: 1em;
-    }
-
-    .popup {
-        left: 85%;
-    }
-}
-
-@media (max-width: 768px) {
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h2 {
-        font-size: 1.1em;
-    }
-
-    .search {
-        flex-direction: row;
-        gap: 0.8em;
-    }
-
-    .booksContainer {
-        padding: 1em;
-        margin: 1em;
-        gap: 1em;
-    }
-
-    .selectedBook {
-        width: 100vw;
-        top: 10%;
-        height: 90vh;
-        margin: 0;
-        border-radius: 0.5em;
-    }
-
-    .read-books {
-        width: 95vw;
-        height: 70vh;
-    }
-
-    .list-element {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .readBook-Image {
-        height: 6em;
-        width: 6em;
-        margin: 0;
-    }
-
-    .popup {
-        left: 80%;
-        font-size: 1.3em;
-    }
-} */
-
 @media (max-width: 768px) {
     body{
        height: auto;
@@ -613,4 +522,13 @@ button{
     font-size: 1em;
 }
 
+.selectedBook{
+    position: fixed;
+    top: 15%;
+    right: -5%;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    cursor:auto;
+}
 }
