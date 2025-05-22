@@ -15,7 +15,12 @@ export default function App(){
   //const [readBook, setReadBook] = useState([]);
   const [readBook, setReadBook] = useState(function() {
     const storedValue = localStorage.getItem('ReadBook');
-     return storedValue ? JSON.parse(storedValue) : [];
+    try {
+        return storedValue ? JSON.parse(storedValue) : [];
+    } catch {
+      return [];
+    }
+    // return storedValue ? JSON.parse(storedValue) : [];
     // return JSON.parse(storedValue);
   });
   const [showFavorite, setShowFavorite] = useState(false);
@@ -75,11 +80,19 @@ function handleAddToFavorites(book) {
    setSelectedID(null);
   }
 
-  function handleAddReadBook(book){
-    setReadBook((readBook) => [...readBook, book]);
+  // function handleAddReadBook(book){
+  //   setReadBook((readBook) => [...readBook, book]);
 
-    //localStorage.setItem('ReadBook', JSON.stringify([...readBook, book]));
-  }
+  //   //localStorage.setItem('ReadBook', JSON.stringify([...readBook, book]));
+  // }
+
+  function handleAddReadBook(book){
+  setReadBook((readBook) => {
+    const currentBooks = Array.isArray(readBook) ? readBook : [];
+    return [...currentBooks, book];
+  });
+}
+
 
   function handleDeleteReadBook(id) {
     setReadBook((readBook) => readBook.filter((book) =>
