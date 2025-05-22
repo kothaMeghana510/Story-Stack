@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import StarRating from './starRating';
 
-//const key = "AIzaSyCKgfDiPLUMSz9LEhlUVE3VyJ4W7yIcfRI";
-
 const key = process.env.REACT_APP_GOOGLE_BOOKS_KEY ;
 export default function App(){
   
@@ -29,25 +27,6 @@ export default function App(){
       return FavoriteBooks ? JSON.parse(FavoriteBooks) : []; 
   });
   
-
-  
-  // function handleAddToFavorites(book){
-  //   setAddToFavorites((addToFavorites) => [...addToFavorites, book]);
-  // }
-
-//   function handleAddToFavorites(book) {
-    
-//     setAddToFavorites((prevFavorites) => {
-//     const isFav = prevFavorites.some(favBook => favBook.id === book.id);
-//     if (isFav) {
-//       // Remove it
-//       return prevFavorites.filter(favBook => favBook.id !== book.id);
-//     } else {
-//       // Add it
-//       return [...prevFavorites, book];
-//     }
-//   });
-// }
 
 function handleAddToFavorites(book) {
   setAddToFavorites((prevFavorites) => {
