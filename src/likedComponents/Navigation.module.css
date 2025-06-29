@@ -1,0 +1,28 @@
+.links{
+    color: whitesmoke;
+    text-decoration: none;
+    padding: 0.5em;
+}
+
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links.active{
+   border-bottom: 5px solid #e91e63;
+   border-radius: 5px;
+   background-color: blueviolet;
+}
+
+@media (max-width: 600px){
+    .links{
+        padding: 0.1em;
+        font-size: 0.8em;
+    }
+
+    .navigation{
+        margin-bottom: 2em;
+    }
+}

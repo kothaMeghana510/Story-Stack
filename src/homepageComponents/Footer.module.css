@@ -1,0 +1,52 @@
+.footer{
+    padding: 2em;
+    background-color: black;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.sectionLinks{
+    margin-top: 2em;
+    display: flex;
+    gap: 2em;
+    background-color:gray;
+    padding: 1em;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px #e91e63);
+}
+
+.tags{
+    text-decoration: none;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.tags::after{
+    content: "||";
+    margin: 1em;
+}
+
+.tags:hover{
+    color: aqua;
+    
+}
+
+.quote{
+    margin-top: 3em;
+}
+
+@media (max-width: 600px){
+    .footer{
+        font-size: 0.9em;
+        height: 60vh;
+    }
+
+    .sectionLinks{
+    gap: 1em;
+    padding: 0.5em;
+    font-size: 0.9em;
+}
+}

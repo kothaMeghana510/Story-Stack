@@ -22,14 +22,45 @@ body{
 
 }
 
+html{
+    scroll-behavior: smooth;
+}
 
 .logo{
+   margin-right: auto;
+   margin-left: 2em;
+}
+
+.nav{
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1.2em;
     background: linear-gradient(to right, #6a1b9a, #e91e63);
 }
+
+.links{
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    font-size: 1.3em;
+}
+
+.nav-link{
+    color: whitesmoke;
+    text-decoration: none;
+    margin-right: 2em;
+    padding: 0.5em;
+}
+
+
+.nav-link.active{
+    background-color: #6a1b9a;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 10px #6a1b9a);
+}
+
+
 
 h1{
     font-family: Delius Unicase;
@@ -184,6 +215,7 @@ input{
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 
 @keyframes spin {
     0% { transform: rotate(0deg); }
@@ -348,17 +380,71 @@ img{
     padding: 2em;
 }
 
+.screen{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+::selection{
+    background-color: #b39ddb;
+}
+
+::placeholder{
+    color: #999;
+    font-style: italic;
+    font-size: 0.9em;
+}
+
+input:focus{
+    outline: none;
+    box-shadow: 0 0 5px #9575cd;
+    border: 1px solid #9575cd;
+}
+
+textarea::-webkit-resizer{
+    background-color: #7e57c2;
+    width: 10px;
+    height: 10px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator{
+    background-color: #6c63ff;
+    color: whitesmoke;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator:hover{
+    background-color: #5a52d1;
+}
+
+
 
 @media (max-width: 768px) {
     body{
        height: auto;
        overflow-y: auto;
-
+       overflow-x: hidden;
     }
 
     .logo {
-        padding: 0.8em;
+        font-size: 1em;
     }
+
+    .nav{
+    padding: 1em;
+    font-size: 0.6em;
+    }
+
+    .links{
+        gap: 1em;
+    }
+
+    .nav-link{
+        margin-right: 0em;
+    }
+
 
     .search {
         flex-direction: row;
@@ -530,5 +616,13 @@ button{
     height: 100vh;
     overflow-y: auto;
     cursor:auto;
+}
+
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    align-items: center;
 }
 }

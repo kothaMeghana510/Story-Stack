@@ -1,0 +1,23 @@
+.slider{
+    padding: 2em;
+    width: 35vw;
+    height: 100vh;
+    /* background-color: rgba(102, 51, 153, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
+    background: linear-gradient(90deg, #243b55 0%, #141e30 100%);
+
+    margin: 1em;
+    border: 1px solid #9575cd;
+    border-radius: 20px;
+}
+
+@media (max-width: 600px) {
+    .slider {
+        width: 80vw;
+        height: 50vh;
+        margin: 1em;
+        overflow-y: scroll;
+    }
+}
+

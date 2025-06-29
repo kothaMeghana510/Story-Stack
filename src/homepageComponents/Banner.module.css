@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap');
+
+.bannerContainer{
+    background: linear-gradient(to right, #6a1b9a, #e91e63,#8e24aa, #ff4081);
+    background-size: 400% 400%;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: bannerAnimation 10s ease infinite;
+    gap: 2em;
+}
+
+@keyframes bannerAnimation {
+  0%{ background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+  
+}
+
+.bannerWave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  display: block;
+}
+
+.head{
+  font-family: Metal Mania;
+  font-size: 5em;
+}
+
+.btn{
+  filter: drop-shadow(0 0 10px #111);
+}
+
+@media (max-width: 600px) {
+  .head{
+    font-size: 3em;
+  }
+}
