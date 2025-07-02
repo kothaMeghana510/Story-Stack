@@ -1,20 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import RootPage from './pages/RootPage';
-import Explore from "./pages/Explore";
-import LikedBooks from './pages/LikedBooks'
+import { lazy, Suspense } from "react";
+
+import LayoutBook from "./likedComponents/LayoutBook";
 import Favorites from "./likedComponents/Favorites";
 import LibraryBooks from "./likedComponents/LibraryBooks";
+import CustomBook from "./likedComponents/CustomBook";
+
 import { FavoriesProvider } from "./Contexts/FavoritesContext";
 import { LibraryProvider } from "./Contexts/LibraryContext";
-import LayoutBook from "./likedComponents/LayoutBook";
-import { readBook } from './Contexts/LibraryContext';
-import CustomBook from "./likedComponents/CustomBook";
+
+import DotLoader from './loaderUI/DotLoader';
+
+const RootPage = lazy(() => import('./pages/RootPage'));
+const Explore = lazy(() => import('./pages/Explore'));
+const LikedBooks = lazy(() => import('./pages/LikedBooks'));
+ 
 export default function App(){
  return (
  <div>
   <FavoriesProvider>
     <LibraryProvider>
     <BrowserRouter basename="/Story-Stack">
+    <Suspense fallback={<DotLoader />}>
         <Routes>
           <Route path="/" element={ <RootPage />}/>
           <Route path="explore" element={<Explore />} />
@@ -25,6 +32,7 @@ export default function App(){
               <Route path="custombook" element={<CustomBook />} />
           </Route>
           </Routes>
+          </Suspense>
     </BrowserRouter>
     </LibraryProvider>
     </FavoriesProvider>

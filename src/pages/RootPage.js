@@ -2,6 +2,7 @@ import Banner from "../homepageComponents/Banner";
 import Features from "../homepageComponents/Features";
 import  Video from "../homepageComponents/Video";
 import Footer from "../homepageComponents/Footer";
+
 function RootPage() {
     return (
         <div>

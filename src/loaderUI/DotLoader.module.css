@@ -1,0 +1,46 @@
+.dot{
+    display: inline-block;
+    background: linear-gradient(135deg, #e91e63 0%, #2575fc 100%);
+    width: 1.5em;
+    height: 1.5em;
+    margin: 1em;
+    border-radius: 50%;
+    animation: jump 0.6s infinite ease-in-out;
+}
+
+.loadContainer{
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.full{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(90deg, #141E30, #243B55);
+}
+
+@keyframes jump {
+     0%, 100%{
+        transform: translateY(0)
+    }
+    50%{
+        transform: translateY(-10px)
+    }
+}
+
+.dot1{
+    animation-delay: 0s;
+}
+
+.dot2{
+    animation-delay: 0.2s;
+}
+
+.dot3{
+    animation-delay: 0.4s;
+}
